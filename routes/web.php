@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
