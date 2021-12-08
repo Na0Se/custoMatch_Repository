@@ -17124,3 +17124,45 @@ readers do not read off random characters that represent icons */
   color: #fff;
 }
 
+body {
+  overflow: visible;
+}
+
+.notice,
+.alert {
+  display: none;
+}
+
+.signupPage .header {
+  padding: 20px;
+  text-align: center;
+  background: #fd5068;
+  color: #fff;
+}
+
+.signupPage .submitBtn {
+  background: #fd5068;
+  color: #fff;
+  width: 200px;
+  padding: 10px;
+  border-radius: 90px;
+  transition: opacity 0.5s;
+}
+
+.signupPage .submitBtn:hover {
+  opacity: 0.6;
+}
+
+.signupPage .errorMessage {
+  color: #fd5068;
+}
+
+.linkToLogin {
+  margin: 15px 0 15px;
+  text-align: center;
+}
+
+.linkToLogin > a {
+  color: #fd5068;
+}
+

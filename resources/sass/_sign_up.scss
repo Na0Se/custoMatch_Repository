@@ -1,0 +1,43 @@
+$main-color: #fd5068;
+$main-text-color: #fff;
+
+body {
+  overflow: visible;
+}
+
+.notice,
+.alert {
+  display: none;
+}
+
+.signupPage {
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: $main-color;
+    color: $main-text-color;
+  }
+
+  .submitBtn {
+    background: $main-color;
+    color: $main-text-color;
+    width: 200px;
+    padding: 10px;
+    border-radius: 90px;
+    transition: opacity .5s;
+    &:hover {
+      opacity: .6;
+    }
+  }
+  .errorMessage{
+    color:#fd5068;
+  }
+}
+
+.linkToLogin {
+  margin: 15px 0 15px;
+  text-align: center;
+  & > a {
+    color:#fd5068;
+  }
+}
