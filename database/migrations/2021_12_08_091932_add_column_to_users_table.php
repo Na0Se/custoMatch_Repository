@@ -17,6 +17,7 @@ class AddColumnToUsersTable extends Migration
             Schema::table('users', function(Blueprint $table) {
                 $table->string('self_introduction', 500)->nullable();
                 $table->string('sex');
+                $table->string('introduction', 500)->nullable();
             });
         });
     }
