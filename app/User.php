@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    const CATEGORY_CLERK = 'Clerk';
+
+    const CATEGORY_CUSTOMER = 'Customer';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +40,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isClerk()
+    {
+        return $this->sex === self::CATEGORY_CLERK;
+    }
+    
+    public function isCustomer()
+    {
+        return $this->sex === self::CATEGORY_CUSTOMER;
+    }
 }

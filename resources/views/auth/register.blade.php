@@ -50,11 +50,11 @@
       <div class="form-group">
         <div><label>タイプ</label></div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" name="sex" value="0" type="radio" id="inlineRadio1" checked>
+          <input class="form-check-input" name="sex" value="Clerk" type="radio" id="inlineRadio1" checked>
           <label class="form-check-label" for="inlineRadio1">接客者</label>
         </div>
         <div class="form-check form-check-inline">
-        <input class="form-check-input" name="sex" value="1" type="radio" id="inlineRadio2">
+        <input class="form-check-input" name="sex" value="Customer" type="radio" id="inlineRadio2">
           <label class="form-check-label" for="inlineRadio2">お客様</label>
         </div>
       </div>

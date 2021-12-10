@@ -14,18 +14,20 @@
   
   <div class="container">
     @foreach($users as $user)
+    @if ($user->isClerk())
       <div class="card">
         <div class="card-header">
         {{--@if ($user->user->base64Image)
         <img src="{{ $user->user->base64Image }}" alt="{{ $post->user->name }}" class="img-thumbnail" style="width: 100px" >
         @endif--}}
-        {{ $user->name }}
+            {{ $user->name }}
         </div>
         <div class="card-body">
             　<p class="card-text font-weight-bold">{{ $user->self_introduction }}</p>
         </div>
       </div>
       <br>
+    @endif
     @endforeach
   </div>
 
