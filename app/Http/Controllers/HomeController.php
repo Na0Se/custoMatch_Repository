@@ -25,8 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all(); 
+        //$users = User::all(); 
+        //$keyword = $request->input('q');
+        $query = User::query();
 
-        return view('home', compact('users')); 
+        /*if(!empty($keyword))
+        {
+            $query->where('title','like','%'.$keyword.'%')->orWhere('body','like','%'.$keyword.'%');
+        }
+        */
+        $users = $query->orderBy('created_at','desc')->paginate(10);
+        return view('home', ['users' => $users]);//->with('keyword',$keyword);
+        //return view('home', compact('users')); 
     }
 }
