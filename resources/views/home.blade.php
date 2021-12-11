@@ -19,7 +19,7 @@
         <br>
         <br>
   </div>--}}
-  
+  <div id="card-user">
   <div class="container">
     @foreach($users as $user)
     @if ($user->isClerk())
@@ -40,6 +40,7 @@
     @endif
     @endforeach
   </div>
+  </div>
 
   <div class="container">
       <div class="col-sm-8" style="text-align:right;">
@@ -48,7 +49,12 @@
           </div>
       </div>
   </div>
-  
 </div>
+
+<script>
+  var usersNum = {{ $userCount }};
+  var from_user_id = {{ $from_user_id }};
+</script>
+
 @endsection
 

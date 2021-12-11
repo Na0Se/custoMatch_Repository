@@ -37270,6 +37270,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./home */ "./resources/js/home.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37314,6 +37316,54 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/home.js":
+/*!******************************!*\
+  !*** ./resources/js/home.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var currentUserIndex = 0;
+
+var postReaction = function postReaction(to_user_id, reaction) {
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+  $.ajax({
+    type: "POST",
+    url: "/api/like",
+    data: {
+      to_user_id: to_user_id,
+      from_user_id: from_user_id,
+      reaction: reaction
+    },
+    success: function success(j_data) {
+      console.log("success");
+    }
+  });
+};
+
+$("#card-user").home({
+  onLike: function onLike(item) {
+    currentUserIndex++;
+    checkUserNum();
+    var to_user_id = item[0].dataset.user_id;
+    postReaction(to_user_id, 'like');
+  },
+  animationRevertSpeed: 200,
+  animationSpeed: 400,
+  threshold: 1,
+  likeSelector: '.like'
+});
+$('.actions .like, .actions .dislike').click(function (e) {
+  e.preventDefault();
+  $("#card-user").home($(this).attr('class'));
+});
 
 /***/ }),
 
