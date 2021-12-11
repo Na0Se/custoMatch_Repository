@@ -44,7 +44,7 @@
       @if (Auth::user()->isClerk())
       <div class="form-group">
         <label>アピール内容</label>
-        <textarea class="form-control" name="ntroduction" rows="10">{{$user->introduction}}
+        <textarea class="form-control" name="introduction" rows="10">{{$user->introduction}}
         </textarea>
       </div>  
       @endif

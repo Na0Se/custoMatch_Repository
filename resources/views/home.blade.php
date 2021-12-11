@@ -1,6 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
+<div class="topPage">
+   <nav class="nav">
+    <ul>
+      <li class="personIcon">
+        <a href="/users/show/{{Auth::id()}}"><i class="fas fa-user fa-2x"></i></a></li>
+      <li class="appIcon"><a href="{{route('home')}}"><img src="custoMatch/storage/app/public/images/custoMatch_logo.png"></a></li>
+    </ul>
+   </nav>
   {{--<div class="container">
             <form action="{{ route('search.index') }}" method="GET">
                 <div class="d-flex">
@@ -21,9 +29,11 @@
         <img src="{{ $user->user->base64Image }}" alt="{{ $post->user->name }}" class="img-thumbnail" style="width: 100px" >
         @endif--}}
             {{ $user->name }}
+            <a href="#" class="like"><i class="fas fa-heart fa-2x"></i></a>
         </div>
         <div class="card-body">
             　<p class="card-text font-weight-bold">{{ $user->self_introduction }}</p>
+            　<p class="card-text">{{ $user->introduction }}</p>
         </div>
       </div>
       <br>
@@ -39,7 +49,7 @@
       </div>
   </div>
   
-  
+</div>
 @endsection
 
 

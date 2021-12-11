@@ -17261,3 +17261,162 @@ body {
   color: #fd5068;
 }
 
+.signinPage {
+  margin-top: 10vh;
+}
+
+.signinPage .title {
+  color: #fd5068;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.signinPage .userIcon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: #fd5068;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signinPage .loginBtn {
+  padding: 12px;
+  width: 200px;
+  border-radius: 21px;
+  background: #fd5068;
+  color: #fff;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+  opacity: 1;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.signinPage .loginBtn:hover {
+  opacity: 0.7;
+}
+
+.signinPage .errorMessage {
+  color: #fd5068;
+}
+
+.usershowPage .header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 10px;
+}
+
+.usershowPage .header_logo > a {
+  width: 40px;
+  display: block;
+}
+
+.usershowPage .header_logo > a > img {
+  width: 100%;
+}
+
+.usershowPage .userInfo_name {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.usershowPage .userInfo_selfIntroduction {
+  margin-top: 30px;
+}
+
+.usershowPage .userAction {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin: 20vh auto 0;
+  color: #c3c7d0;
+}
+
+.usershowPage .userAction_common > a {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #c3c7d0;
+  text-decoration: none;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  transition: color 0.5s;
+}
+
+.usershowPage .userAction_common > a:hover {
+  color: #fd5068;
+}
+
+.userEditPage .header {
+  padding: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  background: #fd5068;
+  color: #fff;
+}
+
+.userEditPage .submitBtn {
+  background: #fd5068;
+  color: #fff;
+  width: 200px;
+  padding: 10px;
+  border-radius: 90px;
+  transition: opacity 0.5s;
+}
+
+.userEditPage .submitBtn:hover {
+  opacity: 0.6;
+}
+
+.card-header .like {
+  text-align: right;
+  float: right;
+}
+
+.topPage .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+.topPage .nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.topPage .nav > ul > li {
+  list-style: none;
+}
+
+.topPage .nav > ul > li.personIcon i {
+  color: #dccbcb;
+}
+
+.topPage .nav > ul > li.appIcon > a {
+  width: 40px;
+  display: inline-block;
+}
+
+.topPage .nav > ul > li.appIcon > a > img {
+  width: 100%;
+}
+
+.topPage .nav > ul > li.messageIcon i {
+  color: #dccbcb;
+}
+

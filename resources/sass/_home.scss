@@ -1,0 +1,49 @@
+$main-color: #fd5068;
+$main-text-color: #fff;
+
+.card-header {
+    .like {
+        text-align: right;
+        float:right;
+    }
+}
+
+.topPage {
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+      max-width: 610px;
+      margin: 0 auto;
+      & > ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+        & > li {
+          list-style: none;
+          &.personIcon {
+            i {
+              color:#dccbcb;
+            }
+          }
+          &.appIcon {
+            & > a {
+              width: 40px;
+              display: inline-block;
+              & > img {
+                width: 100%;
+              }
+            }
+          }
+          &.messageIcon {
+             i {
+               color: #dccbcb;
+             }
+          }
+        }
+      }
+    }
+  }
