@@ -50,4 +50,14 @@ class User extends Authenticatable
     {
         return $this->sex === self::CATEGORY_CUSTOMER;
     }
+
+    public function toUserId()
+    {
+        return $this->hasMany('App\Reaction', 'to_user_id', 'id');
+    }
+
+    public function fromUserId()
+    {
+        return $this->hasMany('App\Reaction', 'from_user_id', 'id');
+    }
 }
