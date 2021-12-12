@@ -6,6 +6,9 @@ $main-text-color: #fff;
         text-align: right;
         float:right;
     }
+    &.is-none {
+      display: none;
+    }
 }
 
 .topPage {

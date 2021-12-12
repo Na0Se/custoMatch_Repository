@@ -29,7 +29,7 @@
         <img src="{{ $user->user->base64Image }}" alt="{{ $post->user->name }}" class="img-thumbnail" style="width: 100px" >
         @endif--}}
             {{ $user->name }}
-            <a href="#" class="like"><i class="fas fa-heart fa-2x"></i></a>
+            <a href="#" class="like" data-user_id="{{ $user->id }}"><i class="fas fa-heart fa-2x"></i></a>
         </div>
         <div class="card-body">
             　<p class="card-text font-weight-bold">{{ $user->self_introduction }}</p>

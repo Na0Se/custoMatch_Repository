@@ -18,20 +18,20 @@ var postReaction = function (to_user_id, reaction) {
     }
   });
 }
-$("#card-user").home({
-  onLike: function (item) {
-    currentUserIndex++;
-    checkUserNum();
-    var to_user_id = item[0].dataset.user_id
-    postReaction(to_user_id, 'like')
-  },
-  animationRevertSpeed: 200,
-  animationSpeed: 400,
-  threshold: 1,
-  likeSelector: '.like',
+
+$('.like').click(function (item) {
+  item.preventDefault();
+  currentUserIndex++;
+  checkUserNum();
+  var elem = document.querySelector('.like');
+  var to_user_id = elem.dataset.user_id;
+  postReaction(to_user_id, 'like')
 });
 
-$('.actions .like, .actions .dislike').click(function (e) {
-  e.preventDefault();
-  $("#card-user").home($(this).attr('class'));
-});
+function checkUserNum() {
+    // ユーザー数といいねした回数が同じになればaddClassする
+    if (currentUserIndex === usersNum) {
+      $(".like").addClass("is-none")
+      return;
+    }
+  }
